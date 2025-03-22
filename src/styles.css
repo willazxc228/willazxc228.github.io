@@ -1,0 +1,286 @@
+@import "@fontsource/inter/900-italic.css"; /* Black Italic */
+@import "@fontsource/inter/800-italic.css"; /* Extra Bold Italic */
+/* Общие стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #D9D9D9; /* Серый фон */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Основной контейнер */
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Центральный круг */
+  .circle {
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    background-color: #252625;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cat-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  /* Социальные иконки */
+  .social-icon {
+    position: absolute;
+    width: 80px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Позиционирование иконок */
+  .x        { top: 100px; left: 390px; }
+  .discord  { top: 280px; left: 270px; }
+  .github   { top: 490px; left: 270px; }
+  .steam    { bottom: 150px; left: 390px; }
+  .telegram { bottom: 150px; right: 390px; }
+  .instagram { top: 490px; right: 270px; }
+
+
+  a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Оставляем цвет текста */
+  }
+  
+  /* Изображения иконок */
+  .icon-image {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 5px;
+  }
+  
+  /* Подписи иконок */
+  .icon-text {
+    font-size: 36px;
+    color: #ffffff;
+    font-style: italic;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Текст в углу */
+  .text-box {
+    position: absolute;
+    top: 50px;
+    right: 289px;
+    text-align: right;
+  }
+  
+  .greeting {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 79px;
+    margin-bottom: -40px; /* Уменьшаем расстояние до следующего текста */
+    color: rgb(255, 255, 255);
+    display: block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .subtext {
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    display: block;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  }
+
+ /* 🔹 Адаптация для экранов меньше 1024px (планшеты) */
+@media (max-width: 1024px) {
+  .circle {
+    width: 450px;
+    height: 450px;
+  }
+
+  .cat-image {
+    width: 320px;
+    height: 320px;
+  }
+
+  /* Уменьшаем иконки */
+  .social-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-text {
+    font-size: 18px;
+  }
+
+  /* Перемещаем иконки ближе к центру */
+  .x        { top: 60px; left: 210px; }
+  .discord  { top: 180px; left: 140px; }
+  .github   { top: 320px; left: 140px; }
+  .steam    { bottom: 100px; left: 210px; }
+  .telegram { bottom: 100px; right: 210px; }
+  .instagram { top: 320px; right: 140px; }
+
+  /* Уменьшаем текст и двигаем его */
+  .text-box {
+    top: 30px;
+    right: 30px;
+    text-align: right;
+  }
+
+  .greeting {
+    font-size: 60px;
+    margin-bottom: -30px;
+  }
+
+  .subtext {
+    font-size: 28px;
+  }
+}
+
+/* 🔹 Адаптация для экранов меньше 768px (телефоны) */
+@media (max-width: 768px) {
+  .circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cat-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* Делаем иконки меньше */
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-text {
+    font-size: 12px;
+  }
+
+  /* Двигаем иконки ближе к кругу */
+  .x        { top: 30px; left: 140px; }
+  .discord  { top: 100px; left: 80px; }
+  .github   { top: 200px; left: 80px; }
+  .steam    { bottom: 50px; left: 140px; }
+  .telegram { bottom: 50px; right: 140px; }
+  .instagram { top: 200px; right: 80px; }
+
+  /* Перемещаем текст внутрь экрана */
+  .text-box {
+    top: 20px;
+    right: 20px;
+    text-align: center;
+  }
+
+  .greeting {
+    font-size: 36px;
+    margin-bottom: -15px;
+  }
+
+  .subtext {
+    font-size: 18px;
+  }
+}
+/* 🔹 Адаптация для экранов меньше 768px (телефоны) */
+@media (max-width: 768px) {
+  .circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cat-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* Делаем иконки меньше */
+  .social-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-text {
+    font-size: 12px;
+  }
+
+  /* Выстраиваем иконки в две линии */
+  .x, .discord, .github {
+    position: absolute;
+    top: 5%;
+    transform: translateX(-50%);
+  }
+
+  .steam, .telegram, .instagram {
+    position: absolute;
+    bottom: 5%;
+    transform: translateX(-50%);
+  }
+
+  /* Размещаем каждую иконку на нужном месте */
+  .x        { left: 25%; }
+  .discord  { left: 50%; }
+  .github   { left: 75%; }
+  .steam    { left: 25%; }
+  .telegram { left: 50%; }
+  .instagram { left: 75%; }
+
+  /* Перемещаем текст внутрь экрана */
+  .text-box {
+    top: 10px;
+    right: 10px;
+    text-align: center;
+  }
+
+  .greeting {
+    font-size: 36px;
+    margin-bottom: -15px;
+  }
+
+  .subtext {
+    font-size: 18px;
+  }
+}
